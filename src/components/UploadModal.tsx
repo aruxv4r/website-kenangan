@@ -187,7 +187,7 @@ export default function UploadModal({ isOpen, onClose, onSuccess }: UploadModalP
             animate={{ opacity: 1, scale: 1, y: 0 }}
             exit={{ opacity: 0, scale: 0.95, y: 20 }}
             transition={{ type: 'spring', damping: 25, stiffness: 250 }}
-            className="glass-panel w-full max-w-2xl rounded-2xl border border-[#C5A880]/15 overflow-hidden shadow-2xl relative z-10 text-[#F5F2EB]"
+            className="glass-panel w-full max-w-2xl max-h-[90vh] flex flex-col rounded-2xl border border-[#C5A880]/15 overflow-hidden shadow-2xl relative z-10 text-[#F5F2EB]"
           >
             {/* Header */}
             <div className="flex justify-between items-center px-6 py-5 border-b border-[#C5A880]/10">
@@ -206,7 +206,7 @@ export default function UploadModal({ isOpen, onClose, onSuccess }: UploadModalP
             </div>
 
             {/* Inner Content */}
-            <div className="p-6">
+            <div className="p-6 overflow-y-auto flex-1 custom-scrollbar">
               {isSuccess ? (
                 /* Success Screen */
                 <motion.div
@@ -270,7 +270,7 @@ export default function UploadModal({ isOpen, onClose, onSuccess }: UploadModalP
                       onDragLeave={handleDrag}
                       onDrop={handleDrop}
                       onClick={() => fileInputRef.current?.click()}
-                      className={`relative flex flex-col items-center justify-center border border-dashed rounded-xl p-6 cursor-pointer text-center group transition-all duration-300 h-[260px] ${
+                      className={`relative flex flex-col items-center justify-center border border-dashed rounded-xl p-6 cursor-pointer text-center group transition-all duration-300 h-[160px] md:h-[260px] ${
                         isDragging
                           ? 'border-[#C5A880] bg-[rgba(197,168,128,0.06)]'
                           : 'border-[#C5A880]/20 hover:border-[#C5A880]/50 hover:bg-[rgba(197,168,128,0.02)]'

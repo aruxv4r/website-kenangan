@@ -146,7 +146,7 @@ export default function IntroAnimation({ onComplete }: IntroAnimationProps) {
   const phrases = [
     { text: "Every moment is a canvas...", type: "poem" },
     { text: "...painted on the silent pages of time.", type: "poem" },
-    { text: "Souvenirs", type: "title" }
+    { text: "PAN MEMORIES", type: "title" }
   ];
 
   return (
@@ -178,7 +178,7 @@ export default function IntroAnimation({ onComplete }: IntroAnimationProps) {
               className="flex flex-col items-center justify-center"
             >
               <div className="relative inline-block py-4">
-                <span className="font-cursive text-3xl sm:text-5xl md:text-6xl text-[#E8E2D5] italic font-light tracking-wide leading-relaxed block overflow-hidden">
+                <span className="font-cursive text-xl sm:text-5xl md:text-6xl text-[#E8E2D5] italic font-light tracking-wide leading-relaxed block overflow-hidden">
                   {/* Cursive text container with clip reveal */}
                   <motion.span
                     initial={{ width: 0 }}
@@ -215,7 +215,7 @@ export default function IntroAnimation({ onComplete }: IntroAnimationProps) {
               className="flex flex-col items-center justify-center"
             >
               <div className="relative inline-block py-4">
-                <span className="font-cursive text-3xl sm:text-5xl md:text-6xl text-[#E8E2D5] italic font-light tracking-wide leading-relaxed block overflow-hidden">
+                <span className="font-cursive text-xl sm:text-5xl md:text-6xl text-[#E8E2D5] italic font-light tracking-wide leading-relaxed block overflow-hidden">
                   <motion.span
                     initial={{ width: 0 }}
                     animate={{ width: "100%" }}
@@ -261,7 +261,7 @@ export default function IntroAnimation({ onComplete }: IntroAnimationProps) {
               
               {/* Grand Brand Title */}
               <div className="relative inline-block py-6">
-                <span className="font-serif text-5xl sm:text-7xl md:text-8xl text-[#F5F2EB] font-light tracking-[0.2em] uppercase block overflow-hidden">
+                <span className="font-serif text-3xl sm:text-7xl md:text-8xl text-[#F5F2EB] font-light tracking-[0.2em] uppercase block overflow-hidden">
                   <motion.span
                     initial={{ width: 0 }}
                     animate={{ width: "100%" }}
@@ -271,7 +271,7 @@ export default function IntroAnimation({ onComplete }: IntroAnimationProps) {
                       textShadow: '0 0 20px rgba(197, 168, 128, 0.25)'
                     }}
                   >
-                    SOUVENIRS
+                    PAN MEMORIES
                   </motion.span>
                 </span>
                 <motion.div
@@ -325,7 +325,7 @@ export default function IntroAnimation({ onComplete }: IntroAnimationProps) {
             exit={{ opacity: 0 }}
             whileHover={{ opacity: 1, scale: 1.02 }}
             onClick={onComplete}
-            className="absolute bottom-12 right-12 z-20 glass-panel border border-[#C5A880]/30 hover:border-[#C5A880] text-[#E8E2D5] hover:text-[#F5F2EB] text-[9px] uppercase tracking-[0.3em] py-2 px-6 rounded-full cursor-pointer transition-all duration-300"
+            className="absolute bottom-6 right-6 md:bottom-12 md:right-12 z-20 glass-panel border border-[#C5A880]/30 hover:border-[#C5A880] text-[#E8E2D5] hover:text-[#F5F2EB] text-[9px] uppercase tracking-[0.3em] py-2 px-6 rounded-full cursor-pointer transition-all duration-300"
           >
             Skip Intro
           </motion.button>

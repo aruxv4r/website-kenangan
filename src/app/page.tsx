@@ -128,7 +128,7 @@ export default function Home() {
           <header className="sticky top-0 z-40 bg-[#12100E]/80 backdrop-blur-md border-b border-[#C5A880]/10 px-6 py-4 md:px-12 flex justify-between items-center transition-all">
             <div className="flex flex-col">
               <span className="font-serif text-lg tracking-[0.3em] text-[#F5F2EB] uppercase font-light">
-                SOUVENIRS
+                PAN MEMORIES
               </span>
               <span className="text-[7px] tracking-[0.4em] text-[#C5A880] uppercase font-sans font-light mt-0.5">
                 The Personal Archive
@@ -154,7 +154,7 @@ export default function Home() {
           </header>
 
           {/* Main Body */}
-          <main className="flex-1 max-w-7xl w-full mx-auto px-6 py-12 md:px-12 md:py-20 space-y-24">
+          <main className="flex-1 max-w-7xl w-full mx-auto px-4 sm:px-6 md:px-12 py-8 md:py-20 space-y-16 md:space-y-24">
             
             {/* Hero Section */}
             <section className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
@@ -302,7 +302,7 @@ export default function Home() {
             <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
               <div className="flex flex-col items-center md:items-start space-y-1">
                 <span className="font-serif text-sm tracking-[0.2em] text-[#F5F2EB] uppercase">
-                  SOUVENIRS
+                  PAN MEMORIES
                 </span>
                 <span className="font-cursive text-xs text-[#C5A880]/70 italic">
                   Cherish the passing light.
@@ -310,7 +310,7 @@ export default function Home() {
               </div>
               
               <div className="text-center md:text-right font-sans text-[9px] tracking-widest text-[#E8E2D5]/35 uppercase">
-                &copy; {new Date().getFullYear()} Souvenirs Archive. All rights preserved.
+                &copy; {new Date().getFullYear()} PAN MEMORIES Archive. All rights preserved.
               </div>
             </div>
           </footer>

@@ -18,17 +18,26 @@ interface MemoryCardStackProps {
 }
 
 export default function MemoryCardStack({ cards, onCardClick }: MemoryCardStackProps) {
+  const [isMobile, setIsMobile] = React.useState(false);
+
+  React.useEffect(() => {
+    const handleResize = () => setIsMobile(window.innerWidth < 768);
+    handleResize();
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
   // Pre-configured offsets and rotations for poker-style fan effect
   const cardLayouts = [
-    { rotate: -12, x: -70, y: 15, zIndex: 40 },
-    { rotate: -4, x: -20, y: -5, zIndex: 30 },
-    { rotate: 6, x: 30, y: -10, zIndex: 20 },
-    { rotate: 15, x: 75, y: 12, zIndex: 10 },
+    { rotate: -10, x: isMobile ? -30 : -70, y: isMobile ? 8 : 15, zIndex: 40 },
+    { rotate: -3, x: isMobile ? -10 : -20, y: isMobile ? -3 : -5, zIndex: 30 },
+    { rotate: 5, x: isMobile ? 10 : 30, y: isMobile ? -5 : -10, zIndex: 20 },
+    { rotate: 12, x: isMobile ? 30 : 75, y: isMobile ? 6 : 12, zIndex: 10 },
   ];
 
   return (
-    <div className="relative w-full h-[400px] md:h-[480px] flex items-center justify-center select-none py-12">
-      <div className="relative w-[240px] h-[320px] md:w-[280px] md:h-[380px]">
+    <div className="relative w-full h-[300px] md:h-[480px] flex items-center justify-center select-none py-6 md:py-12">
+      <div className="relative w-[190px] h-[250px] md:w-[280px] md:h-[380px]">
         {cards.slice(0, 4).map((card, index) => {
           const layout = cardLayouts[index] || { rotate: 0, x: 0, y: 0, zIndex: 1 };
           

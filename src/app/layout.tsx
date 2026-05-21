@@ -22,7 +22,7 @@ const pinyonScript = Pinyon_Script({
 });
 
 export const metadata: Metadata = {
-  title: "Souvenirs - A Cinematic Archive of Memories",
+  title: "PAN MEMORIES - A Cinematic Archive of Memories",
   description: "An elegant, nostalgic digital memory book for archiving and cherishing life's beautiful moments.",
 };
 

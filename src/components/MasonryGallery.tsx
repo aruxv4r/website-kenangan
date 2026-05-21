@@ -305,7 +305,7 @@ export default function MasonryGallery({ items, onDeleteSuccess }: MasonryGaller
                 </div>
 
                 <div className="pt-6 text-[8px] tracking-[0.2em] font-sans text-[#E8E2D5]/30 uppercase text-center border-t border-[#C5A880]/5 mt-4">
-                  Souvenirs Memory Index
+                  PAN MEMORIES Index
                 </div>
               </div>
             </motion.div>
@@ -338,11 +338,10 @@ function GalleryCard({ item, onClick }: { item: GalleryItem; onClick: () => void
             {/* Displaying simple video thumbnail placeholder or loading video paused */}
             <video
               src={item.mediaUrl}
-              className="w-full object-cover grayscale-[30%] sepia-[10%] group-hover:scale-105 group-hover:grayscale-0 transition-all duration-700"
+              className="w-full object-cover grayscale-[30%] sepia-[10%] group-hover:scale-105 group-hover:grayscale-0 transition-all duration-700 max-h-[260px] sm:max-h-[420px]"
               muted
               playsInline
               preload="metadata"
-              style={{ maxHeight: '420px' }}
             />
             {/* Center Play Overlay */}
             <div className="absolute inset-0 flex items-center justify-center bg-black/20 group-hover:bg-black/5 transition-colors duration-500 z-10">
@@ -356,8 +355,7 @@ function GalleryCard({ item, onClick }: { item: GalleryItem; onClick: () => void
             src={item.mediaUrl}
             alt={item.title}
             loading="lazy"
-            className="w-full object-cover grayscale-[25%] sepia-[12%] contrast-[102%] group-hover:scale-105 group-hover:grayscale-0 transition-all duration-700"
-            style={{ maxHeight: '450px' }}
+            className="w-full object-cover grayscale-[25%] sepia-[12%] contrast-[102%] group-hover:scale-105 group-hover:grayscale-0 transition-all duration-700 max-h-[260px] sm:max-h-[450px]"
           />
         )}
 
