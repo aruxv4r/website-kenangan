@@ -20,10 +20,10 @@ interface MemoryCardStackProps {
 export default function MemoryCardStack({ cards, onCardClick }: MemoryCardStackProps) {
   // Pre-configured offsets and rotations for poker-style fan effect
   const cardLayouts = [
-    { rotate: -12, x: -70, y: 15, zIndex: 10 },
-    { rotate: -4, x: -20, y: -5, zIndex: 20 },
-    { rotate: 6, x: 30, y: -10, zIndex: 30 },
-    { rotate: 15, x: 75, y: 12, zIndex: 15 },
+    { rotate: -12, x: -70, y: 15, zIndex: 40 },
+    { rotate: -4, x: -20, y: -5, zIndex: 30 },
+    { rotate: 6, x: 30, y: -10, zIndex: 20 },
+    { rotate: 15, x: 75, y: 12, zIndex: 10 },
   ];
 
   return (

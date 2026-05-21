@@ -2,6 +2,8 @@ import { NextRequest, NextResponse } from 'next/server';
 import { getMemories, saveMemory, isCloudDbConfigured } from '@/lib/db';
 import { uploadFile, isCloudinaryConfigured } from '@/lib/storage';
 
+export const dynamic = 'force-dynamic';
+
 export async function GET() {
   try {
     const memories = await getMemories();
