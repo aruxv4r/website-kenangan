@@ -36,7 +36,7 @@ export default function MemoryCardStack({ cards, onCardClick }: MemoryCardStackP
   ];
 
   return (
-    <div className="relative w-full h-[300px] md:h-[480px] flex items-center justify-center select-none py-6 md:py-12">
+    <div className="relative z-10 w-full h-[300px] md:h-[480px] flex items-center justify-center select-none py-6 md:py-12">
       <div className="relative w-[190px] h-[250px] md:w-[280px] md:h-[380px]">
         {cards.slice(0, 4).map((card, index) => {
           const layout = cardLayouts[index] || { rotate: 0, x: 0, y: 0, zIndex: 1 };
